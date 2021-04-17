@@ -1,18 +1,19 @@
 {
   "name": "bootstrap-portfolio-project",
   "version": "1.0.0",
-  "description": "Git and NPM",
+  "description": "Luna Mystix Flowers",
   "main": "home.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
     "start": "npm run lite",
-    "lite": "lite-server"
+    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HeddieLeigh/LunaMystix.git"
   },
-  "author": "",
+  "author": "Amanda Finstad",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/HeddieLeigh/LunaMystix/issues"
@@ -20,5 +21,10 @@
   "homepage": "https://github.com/HeddieLeigh/LunaMystix#readme",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }
