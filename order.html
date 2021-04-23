@@ -64,29 +64,29 @@
                 <div class="col-4 text-center">
                     <h3 class="text-center">Stardust</h3>
                     <img src="images/flowerPink.jpg" alt="tbd" width="200" height="40" class="img-fluid mx-auto d-block my-2" />
-                    <input class="btn btn-outline-dark" type="button" value="Select">
+                    <a role="button" class="btn btn-outline-dark" id="stardustButton">Select</a>
                 </div>
                 <div class="col-4 text-center">
                     <h3 class="text-center">Luna</h3>
                     <img src="images/flowerPink.jpg" alt="tbd" width="200" height="40" class="img-fluid mx-auto d-block my-2" />
-                    <input class="btn btn-outline-dark" type="button" value="Select">
+                    <a role="button" class="btn btn-outline-dark" id="lunaButton">Select</a>
                 </div> 
             </div>
-            <div class="row my-4">
+            <div class="row my-4 pt-4">
                 <div class="col-4 text-center">
                     <h3 class="text-center">The Lovers</h3>
                     <img src="images/flowerPink.jpg" alt="tbd" width="200" height="40" class="img-fluid mx-auto d-block my-2" />
-                    <input class="btn btn-outline-dark" type="button" value="Select">
+                    <a role="button" class="btn btn-outline-dark" id="theLoversButton">Select</a>
                 </div>
                 <div class="col-4 text-center">
                     <h3 class="text-center">Amethyst</h3>
                     <img src="images/flowerPink.jpg" alt="tbd" width="200" height="40" class="img-fluid mx-auto d-block my-2" />
-                    <input class="btn btn-outline-dark" type="button" value="Select">
+                    <a role="button" class="btn btn-outline-dark" id="amethystButton">Select</a>
                 </div>
                 <div class="col-4 text-center">
                     <h3 class="text-center">11:11</h3>
                     <img src="images/flowerPink.jpg" alt="tbd" width="200" height="40" class="img-fluid mx-auto d-block my-2" />
-                    <input class="btn btn-outline-dark" type="button" value="Select">
+                    <a role="button" class="btn btn-outline-dark" id="elevenButton">Select</a>
                 </div>
             </div>
         </div>
@@ -128,7 +128,7 @@
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="handoffType" id="delivery">
                                 <label class="form-check-label" for="delivery">
-                                  Delivery (+$10.00)
+                                  Delivery
                                 </label>
                               </div>
                               <div class="form-check form-check-inline">
@@ -173,32 +173,51 @@
                               </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Size</label>
+                            <label class="col-sm-6 col-form-label">Size</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" name="zodiacSign" id="zodiacSign">
+                                    <option>Select...</option>
+                                    <option value="Small">Cosmic</option>
+                                    <option vlaue="Medium">Stellar</option>
+                                    <option value="Large">SuperNova</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Size</label>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="arrSize" id="cosmic">
-                                <label class="col-sm-3 form-check-label" for="cosmic">
-                                  Cosmic ($45.00)
+                                <label class="col form-check-label" for="cosmic">
+                                  Cosmic
                                 </label>
                               </div>
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="arrSize" id="stellar">
-                                <label class="col-sm-3 form-check-label" for="stellar">
-                                  Stellar ($65.00)
+                                <label class="col form-check-label" for="stellar">
+                                  Stellar
                                 </label>
                               </div>
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="arrSize" id="superNova">
-                                <label class="col-sm-3 form-check-label" for="superNova">
-                                  Super Nova ($85.00)
+                                <label class="col form-check-label" for="superNova">
+                                  Super Nova
                                 </label>
                               </div>
                         </div>
+                        -->
                         <!--write function for total cost
                         <div class="form-group row">
                             <label class="col-sm-6 col-form-label">Total:</label>
                             <div class="col-sm-3"></div>
                         </div>
                         -->
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label" for="cardMessage">Card Message</label>
+                            <div class="col">
+                                    <textarea class="form-control" id="cardMessage" rows="3"></textarea>
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <div class="col">
                                 <button data-dismiss="modal" class="btn btn-secondary">Cancel</button>
@@ -210,7 +229,397 @@
             </div>
         </div>
     </div>
-</div>   
+</div>
+<!--Stardust-->
+<div id="stardustModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Stardust</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Delivery or Pickup</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="handoffType" id="delivery">
+                                <label class="form-check-label" for="delivery">
+                                  Delivery
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="handoffType" id="pickup">
+                                <label class="form-check-label" for="pickup">
+                                  Pickup
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="date" class="col-form-label">Date</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Date"/>
+                            </div> 
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Arrangement Type</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="arrType" id="vase">
+                                <label class="form-check-label" for="vase">
+                                  Vase Arrangement
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="arrType" id="wrap">
+                                <label class="form-check-label" for="wrap">
+                                  Wrapped Bouquet
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Size</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" name="zodiacSign" id="zodiacSign">
+                                    <option>Select...</option>
+                                    <option value="Small">Cosmic</option>
+                                    <option vlaue="Medium">Stellar</option>
+                                    <option value="Large">SuperNova</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label" for="cardMessage">Card Message</label>
+                            <div class="col">
+                                    <textarea class="form-control" id="cardMessage" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <button data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-info">Place Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Luna-->
+<div id="lunaModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Luna</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Delivery or Pickup</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="handoffType" id="delivery">
+                                <label class="form-check-label" for="delivery">
+                                  Delivery
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="handoffType" id="pickup">
+                                <label class="form-check-label" for="pickup">
+                                  Pickup
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="date" class="col-form-label">Date</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Date"/>
+                            </div> 
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Arrangement Type</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="arrType" id="vase">
+                                <label class="form-check-label" for="vase">
+                                  Vase Arrangement
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="arrType" id="wrap">
+                                <label class="form-check-label" for="wrap">
+                                  Wrapped Bouquet
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Size</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" name="zodiacSign" id="zodiacSign">
+                                    <option>Select...</option>
+                                    <option value="Small">Cosmic</option>
+                                    <option vlaue="Medium">Stellar</option>
+                                    <option value="Large">SuperNova</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label" for="cardMessage">Card Message</label>
+                            <div class="col">
+                                    <textarea class="form-control" id="cardMessage" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <button data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-info">Place Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--theLovers-->
+<div id="theLoversModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">The Lovers</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Delivery or Pickup</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="handoffType" id="delivery">
+                                <label class="form-check-label" for="delivery">
+                                  Delivery
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="handoffType" id="pickup">
+                                <label class="form-check-label" for="pickup">
+                                  Pickup
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="date" class="col-form-label">Date</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Date"/>
+                            </div> 
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Arrangement Type</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="arrType" id="vase">
+                                <label class="form-check-label" for="vase">
+                                  Vase Arrangement
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="arrType" id="wrap">
+                                <label class="form-check-label" for="wrap">
+                                  Wrapped Bouquet
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Size</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" name="zodiacSign" id="zodiacSign">
+                                    <option>Select...</option>
+                                    <option value="Small">Cosmic</option>
+                                    <option vlaue="Medium">Stellar</option>
+                                    <option value="Large">SuperNova</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label" for="cardMessage">Card Message</label>
+                            <div class="col">
+                                    <textarea class="form-control" id="cardMessage" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <button data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-info">Place Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Amethyst-->
+<div id="amethystModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Amethyst</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Delivery or Pickup</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="handoffType" id="delivery">
+                                <label class="form-check-label" for="delivery">
+                                  Delivery
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="handoffType" id="pickup">
+                                <label class="form-check-label" for="pickup">
+                                  Pickup
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="date" class="col-form-label">Date</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Date"/>
+                            </div> 
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Arrangement Type</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="arrType" id="vase">
+                                <label class="form-check-label" for="vase">
+                                  Vase Arrangement
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="arrType" id="wrap">
+                                <label class="form-check-label" for="wrap">
+                                  Wrapped Bouquet
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Size</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" name="zodiacSign" id="zodiacSign">
+                                    <option>Select...</option>
+                                    <option value="Small">Cosmic</option>
+                                    <option vlaue="Medium">Stellar</option>
+                                    <option value="Large">SuperNova</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label" for="cardMessage">Card Message</label>
+                            <div class="col">
+                                    <textarea class="form-control" id="cardMessage" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <button data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-info">Place Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--11:11-->
+<div id="elevenModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">11:11</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Delivery or Pickup</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="handoffType" id="delivery">
+                                <label class="form-check-label" for="delivery">
+                                  Delivery
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="handoffType" id="pickup">
+                                <label class="form-check-label" for="pickup">
+                                  Pickup
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="date" class="col-form-label">Date</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Date"/>
+                            </div> 
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Arrangement Type</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="arrType" id="vase">
+                                <label class="form-check-label" for="vase">
+                                  Vase Arrangement
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="arrType" id="wrap">
+                                <label class="form-check-label" for="wrap">
+                                  Wrapped Bouquet
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label">Size</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" name="zodiacSign" id="zodiacSign">
+                                    <option>Select...</option>
+                                    <option value="Small">Cosmic</option>
+                                    <option vlaue="Medium">Stellar</option>
+                                    <option value="Large">SuperNova</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label" for="cardMessage">Card Message</label>
+                            <div class="col">
+                                    <textarea class="form-control" id="cardMessage" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <button data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-info">Place Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
